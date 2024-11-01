@@ -1,0 +1,416 @@
+.about-banner {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../assets/images/back2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    padding-top: 6rem; 
+    padding-bottom: 6rem; 
+    margin-bottom: 5rem;
+}
+
+.about-banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.about-banner-container h1{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.banner-links{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.banner-links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.banner-links a.active{
+    color: var(--primary-color);
+
+}
+
+.about-separator {
+    width: 2px; 
+    height: 25px; 
+    background-color:var(--secondary);
+    margin: 0 15px; 
+    transform: rotate(15deg);
+}
+
+
+.about-body {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    color: #333;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    gap: 30px;
+}
+
+.about-body-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about-body-left h3 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.about-body-left h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #343a40;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.about-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.about-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #495057;
+    font-weight: 600;
+}
+
+.about-feature-item svg {
+    color: var(--secondary);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.about-feature-item:hover svg {
+    color: var(--primary-color);
+}
+
+.about-body-left p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #6c757d;
+    font-weight: 400;
+    text-align: left;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--secondary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #064f02;
+    transform: scale(1.05);
+}
+
+.about-main-img {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-main-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
+
+.about-sec-img{
+    display: flex;
+    align-items:end;
+    gap: 10px;
+}
+
+.about-experience{
+    background-color: var(--primary-color);
+    padding: 2.5rem;
+}
+
+.about-experience p{
+    color: #000;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.about-experience span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.image-sec-image{
+    width: 280px;
+    height: 350px;
+    margin-top: -170px;
+    border: 5px solid var(--primary-color);
+}
+
+
+
+
+.about-wsu {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+}
+
+.about-wsu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.about-wsu p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about-wsu-table {
+    width: 100%;
+    border-collapse: collapse; /* Combine borders */
+}
+
+.about-wsu-item-cell {
+    padding: 20px;
+    border-right: 2px dashed #ccccccd2; 
+    border-bottom: 2px dashed #ccccccd2; 
+    vertical-align: top;
+}
+
+.about-wsu-table tr:last-child td {
+    border-bottom: none; 
+}
+
+.about-wsu-item-cell:last-child {
+    border-right: none; 
+}
+
+.about-wsu-item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.item-header span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.item-header p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+}
+
+.item-header svg {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.about-wsu-item ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.about-wsu-item ul li {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.about-wsu-item ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: 5px;
+}
+
+.about-wsu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.about-mobile{
+    display: none;
+}
+
+
+/* Media Queries */
+
+/* For devices with a max width of 768px (tablets) */
+@media (max-width: 768px) {
+    .about-full{
+        display: none;
+    }
+
+    .about-mobile{
+        display: block;
+    }
+    .about-body {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .about-wsu-item {
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+
+    .about-body-left {
+        padding: 10px;
+    }
+
+    .about-body-left h1 {
+        font-size: 2rem;
+    }
+
+    .about-feature-item {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .about-sec-img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-sec-image {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .about-wsu {
+        padding: 20px;
+        margin-top: 2rem;
+    }
+
+    .about-wsu h2 {
+        font-size: 2rem;
+    }
+
+    .about-wsu p {
+        font-size: 1rem;
+    }
+
+    /* Single column for "Why Choose Us" */
+    .about-wsu-table tbody {
+        display: block; /* Change table to block for single column */
+    }
+
+    .about-wsu-item-cell {
+        padding: 10px;
+        border: none; /* Remove borders */
+        width: 100%; /* Make it take full width */
+    }
+}
+
+/* For devices with a max width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    .about-banner-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-links a {
+        font-size: 0.9rem;
+    }
+
+    .about-body-left h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-body-left p {
+        font-size: 0.9rem;
+    }
+
+    .about-experience p {
+        font-size: 2.5rem;
+    }
+
+    .about-experience span {
+        font-size: 0.9rem;
+    }
+
+    .about-wsu-item-cell {
+        padding: 10px;
+        border: none; /* Ensure no borders for mobile */
+    }
+
+    .about-wsu-item ul li {
+        font-size: 0.85rem;
+    }
+}

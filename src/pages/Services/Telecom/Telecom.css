@@ -1,0 +1,389 @@
+/* Service Banner */
+.service-banner {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../../assets/images/back2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 5rem;
+}
+
+.service-banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-banner-container h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.service-banner-links {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.service-banner-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.service-banner-links a.active {
+    color: var(--primary-color);
+}
+
+.service-banner-links a:hover {
+    color: var(--primary-color);
+}
+
+.service-separator {
+    width: 2px;
+    height: 25px;
+    background-color: var(--secondary);
+    margin: 0 15px;
+    transform: rotate(15deg);
+}
+
+/* Enterprise Section */
+.telecom-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #000;
+}
+
+.telecom-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--secondary);
+}
+
+.telecom-section .telecom-info {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.telecom-services {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px 0;
+    padding: 0 5%;
+}
+
+.telecom-service-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.telecom-service-item img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.telecom-service-item img:hover {
+    transform: scale(1.05);
+}
+
+.network {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.telecom-service-item h4 {
+    font-size: 1.8rem;
+    color: #2b2b2b;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.telecom-service-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Additional Enterprise Details Section */
+.telecom-section-2 {
+    padding: 40px 5%;
+    border-radius: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.telecom-h3 {
+    margin-top: 2rem;
+}
+
+.telecom-section-2 h3 {
+    font-size: 2rem;
+    color: #2b2b2b;
+    margin: 20px 0;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+}
+
+.telecom-section-2 h3::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.telecom-section-2 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.telecom-section-2 ul li {
+    font-size: 1.2rem;
+    margin: 0;
+    padding-left: 30px;
+    position: relative;
+    color: #333;
+    padding: 15px 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.telecom-section-2 ul li:hover {
+    background-color: #ebf0f6;
+}
+
+.telecom-section-2 ul li .telecom-link {
+    color: var(--primary-color);
+}
+
+.telecom-section-2 p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Testimonial Section */
+.testimonial {
+    background-color: var(--bs-dark);
+}
+
+.testimonial-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    color: #ffffff;
+    gap: 2rem;
+}
+
+.testimonial-left {
+    max-width: 40%;
+}
+
+.testimonial-left h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.testimonial-left h2 {
+    font-size: 2.8rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.testimonial-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #878d97;
+}
+
+.testimonial-left a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 30px;
+    font-size: 1rem;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-left a:hover {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: #fff;
+}
+
+.testimonial-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.testimonial-item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid var(--primary-color);
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+}
+
+.top-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #fff;
+    padding: 20px;
+}
+
+.top-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid var(--primary-color);
+}
+
+.card-test-left h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.card-test-left p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    color: #878d97;
+}
+
+.stars {
+    display: flex;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.bottom-card {
+    padding: 20px;
+}
+
+.bottom-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #aaaaaa;
+    margin-top: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .testimonial {
+        flex-direction: column;
+        padding: 40px;
+    }
+    .testimonial-left,
+    .testimonial-right {
+        max-width: 100%;
+    }
+}
+
+
+/* Responsive Adjustments for Telecom Section */
+@media (max-width: 768px) {
+    .telecom-section {
+        padding: 20px;
+    }
+
+    .telecom-services {
+        padding: 0;
+    }
+
+    .telecom-service-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .telecom-service-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .telecom-section-2 {
+        padding: 20px;
+    }
+
+    .telecom-section-2 ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .telecom-section-2 ul li {
+        padding-left: 0;
+    }
+}
+
+/* Responsive Adjustments for Testimonial Section */
+@media (max-width: 768px) {
+    .testimonial {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-left,
+    .testimonial-right {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-item {
+        width: 100%;
+    }
+}

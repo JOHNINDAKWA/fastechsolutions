@@ -1,0 +1,132 @@
+.client-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.client-section h2{
+    font-size: 2.5rem;
+
+}
+
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    padding: 18px 40px;
+    cursor: pointer;
+    margin: 25px 10px;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--secondary); 
+}
+
+
+.client-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    margin: 0; 
+}
+
+.client-logo {
+    max-width: 150px; 
+    height: auto;
+    transition: transform 0.3s;
+    object-fit: contain; 
+}
+
+.client-logo:hover {
+    transform: scale(1.05); 
+}
+
+
+
+/* For screens 992px and below */
+@media (max-width: 992px) {
+    .client-section {
+        padding: 30px;
+    }
+
+    .client-section h2 {
+        font-size: 2rem;
+    }
+
+    .filter-buttons button {
+        padding: 14px 30px;
+        font-size: 0.9rem;
+        margin: 20px 8px;
+    }
+
+    .client-logos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Display 3 columns */
+        gap: 20px;
+    }
+
+    .client-logo {
+        max-width: 120px;
+    }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+    .client-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .filter-buttons button {
+        padding: 12px 25px;
+        font-size: 0.85rem;
+        margin: 18px 6px;
+        width: max-content;
+    }
+
+    .client-logos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Display 2 columns */
+        gap: 15px;
+        align-items: center;
+    }
+
+    .client-logo {
+        max-width: 100px;
+    }
+}
+
+/* For screens 576px and below */
+@media (max-width: 576px) {
+    .client-section {
+        padding: 20px;
+    }
+
+    .client-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .filter-buttons button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+        margin: 15px 5px;
+    }
+
+    .client-logos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Display 1 column */
+        gap: 10px;
+    }
+
+    .client-logo {
+        max-width: 80px;
+    }
+}

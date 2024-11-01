@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+:root{
+    --primary-color:  #F68A0A;
+    --bs-dark: #0E121D;
+    --secondary:rgb(31, 164, 1);
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
