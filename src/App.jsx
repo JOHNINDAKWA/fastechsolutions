@@ -4,14 +4,14 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
-import Telecom from './pages/Services/Telecom/Telecom';
-import CyberSecurity from './pages/Services/CyberSecurity/CyberSecurity';
-import Enterprise from './pages/Services/Enterprise/Enterprise';
   // Import AOS CSS
   import 'aos/dist/aos.css';
   // Import AOS library
   import AOS from 'aos';
 import { useEffect } from 'react';
+import Telecom from './pages/Services/Telecom/Telecom';
+import CyberSecurity from './pages/Services/CyberSecurity/CyberSecurity';
+import Enterprise from './pages/Services/Enterprise/Enterprise';
 
 
 const App = () => {
