@@ -318,7 +318,8 @@
     .footer-title {
         font-size: 1.5rem;
     }
-    .popular-link{
+    .popular-link, 
+    .social-link{
         display: none;
     }
 
