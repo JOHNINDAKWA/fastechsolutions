@@ -10,7 +10,7 @@ import Testimonial2 from "../../../assets/images/testimonial.jpg";
 
 const Enterprise = () => {
   return (
-    <div className="service">
+    <div className="services">
       <div className="service-banner">
         <div className="service-banner-container" data-aos="fade-left">
           <h1>Our Services</h1>

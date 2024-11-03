@@ -10,9 +10,10 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-bottom: 5rem;
+  width: 100vw !important;
 }
 
-.service{
+.services{
   width: 100vw;
   overflow: hidden;
 }
