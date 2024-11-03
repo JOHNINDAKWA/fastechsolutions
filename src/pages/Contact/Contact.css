@@ -11,6 +11,11 @@
     margin-bottom: 5rem;
 }
 
+.contact-cont{
+    width: 100vw;
+    overflow: hidden;
+}
+
 .contact-banner-container {
     display: flex;
     flex-direction: column;

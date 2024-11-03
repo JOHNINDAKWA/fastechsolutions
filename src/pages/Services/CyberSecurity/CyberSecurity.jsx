@@ -10,7 +10,7 @@ import Testimonial2 from '../../../assets/images/testimonial.jpg'
 
 const CyberSecurity = () => {
   return (
-    <div>
+    <div className="service">
       <div className="service-banner">
         <div className="service-banner-container" data-aos="zoom-in">
           <h1>Our Services</h1>

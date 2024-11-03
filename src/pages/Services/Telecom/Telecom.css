@@ -1,4 +1,9 @@
 /* Service Banner */
+.service{
+    width: 100vw;
+    overflow: hidden;
+}
+
 .service-banner {
     position: relative;
     overflow: hidden;

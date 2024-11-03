@@ -12,7 +12,7 @@ import {
 
 const Contact = () => {
   return (
-    <div>
+    <div className="contact-cont">
       <div className="contact-banner">
         <div className="contact-banner-container" data-aos="zoom-in">
           <h1>Our Contacts</h1>

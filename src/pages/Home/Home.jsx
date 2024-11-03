@@ -3,6 +3,7 @@ import Banner from "../../components/Banner/Banner"
 import Clients from "../../components/Clients/Clients"
 import Landing from "../../components/Landing/Landing"
 import Services from "../../components/Services/Services"
+import './Home.css'
 
 const Home = () => {
   return (
