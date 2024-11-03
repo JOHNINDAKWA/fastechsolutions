@@ -34,10 +34,13 @@ const Contact = () => {
             <h3>Contact</h3>
             <h1>Illuminate Your Message Get in Contact</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-              hic aspernatur unde magnam necessitatibus provident iusto maxime
-              nobis esse eligendi.
+              Connect with us to experience reliable, high-speed connectivity
+              and comprehensive security solutions. At Fastech Solutions,
+              we&apos;re dedicated to helping businesses grow with advanced
+              telecommunication and cybersecurity services tailored to meet your
+              needs. Let&apos;s build a secure, connected future together.
             </p>
+
             <div className="contact-social-link">
               <a href="#" className="social-link2">
                 <FaFacebook />
@@ -57,8 +60,12 @@ const Contact = () => {
                 <FaGlobeEurope className="contact-info-icon" />
                 <div className="item-contact">
                   <h3>Our Office</h3>
-                  <span className="span1">Juja, Nairobi</span>
-                  <span className="span2">Kimbo, Nairobi</span>
+                  <span className="span1">
+                    Head office: Chokaa,off Kangundo road, Nairobi.
+                  </span>
+                  <span className="span2">
+                    Malaa office: Kantafu, Kangundo Road, Nairobi.
+                  </span>
                 </div>
               </div>
 
@@ -75,7 +82,7 @@ const Contact = () => {
                   <FaPhone className="contact-info-icon" />
                   <div className="item-contact">
                     <h3>Telephone</h3>
-                    <span className="span1">+254 702207999</span>
+                    <span className="span1">0748764766 0716016706</span>
                   </div>
                 </div>
               </div>
@@ -93,9 +100,9 @@ const Contact = () => {
                 <input type="text" placeholder="Your Interested Service" />
               </div>
               <div className="contact-rest">
-              <input type="text" placeholder="Your Phone" />
-              <textarea placeholder="Body"></textarea>
-              <button type="submit">Send Message</button> 
+                <input type="text" placeholder="Your Phone" />
+                <textarea placeholder="Body"></textarea>
+                <button type="submit">Send Message</button>
               </div>
             </form>
           </div>
@@ -106,7 +113,7 @@ const Contact = () => {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d140679.9951403412!2d36.99461739604087!3d-1.126513691018706!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1708677792152!5m2!1sen!2ske"
               height="450"
-              style={{ border: 0 }} 
+              style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

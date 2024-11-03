@@ -87,12 +87,13 @@ const Navbar = () => {
                     <Link to="/enterprise" className="dropdown-item">
                       Enterprise
                     </Link>
+                    <Link to="/telecom" className="dropdown-item">
+                      Telcom
+                    </Link>
                     <Link to="/cyber-security" className="dropdown-item">
                       Cyber Security
                     </Link>
-                    <Link to="/telecom" className="dropdown-item">
-                      Telecom
-                    </Link>
+
                   </div>
                 </div>
                 <Link to="/contact" className="menu-item">
@@ -146,12 +147,13 @@ const Navbar = () => {
                 <Link to="/enterprise" className="mobile-dropdown-item" onClick={toggleMenu}>
                   Enterprise Solutions
                 </Link>
-                <Link to="/cyber-security" className="mobile-dropdown-item" onClick={toggleMenu}>
-                  Cyber Security Solutions
-                </Link>
                 <Link to="/telecom" className="mobile-dropdown-item" onClick={toggleMenu}>
                   Telecommunication Solutions
                 </Link>
+                <Link to="/cyber-security" className="mobile-dropdown-item" onClick={toggleMenu}>
+                  Cyber Security Solutions
+                </Link>
+
               </div>
             )}
           </div>

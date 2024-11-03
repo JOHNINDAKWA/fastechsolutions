@@ -7,8 +7,8 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import { MdOutlineKeyboardDoubleArrowUp } from 'react-icons/md';
-import { FaWhatsapp } from 'react-icons/fa';
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
 
 import "./Footer.css";
 import Logo from "../../assets/images/logo.png";
@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <div className="footer">
@@ -26,11 +26,13 @@ const Footer = () => {
             <h4 className="footer-title">Address</h4>
             <p>
               <FaMapMarkerAlt className="footer-icon" />
-              123 Street, bairobi, Kenya
+              Chokaa, off Kangundo Road &
+              <br />
+              Kantafu, kangundo Road,Nairobi.
             </p>
             <p>
               <FaPhoneAlt className="footer-icon" />
-              +2547 02207999
+              0748764766 | 0716016706
             </p>
             <p>
               <FaEnvelope className="footer-icon" />
@@ -57,7 +59,7 @@ const Footer = () => {
               Home
             </a>
             <a className="btn btn-link" href="">
-            Our services
+              Our services
             </a>
             <a className="btn btn-link" href="">
               About us
@@ -90,8 +92,9 @@ const Footer = () => {
           <div className="footer-column2" data-aos="fade-up">
             <img src={Logo} alt="logo" />
             <p>
-              Browse our comprehensive range of wifi packages designed to meet
-              your needs, from casual internet users to bandwidth-hungry gamers.
+              Fastech Solutions empowers businesses with high-speed internet,
+              network support, CCTV, and cybersecurity solutions, ensuring
+              connectivity, growth, and security.
             </p>
             <Link to="/contact">Try Us</Link>
           </div>
@@ -120,10 +123,8 @@ const Footer = () => {
         </div>
       </div>
 
-
-
       <a
-        href="https://wa.me/+254745605040"  
+        href="https://wa.me/+254745605040"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-button"
