@@ -19,7 +19,7 @@ const App = () => {
     AOS.init({
       duration: 800, 
       offset: 100,
-      easing: 'ease-in-out', // Easing function for animations
+      easing: 'ease-in-out', 
     });
   }, []);
 
