@@ -126,7 +126,7 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Mobile Navigation */}
+   
       {menuOpen && (
         <div className="Mobile-Nav">
           <Link to="/" className="mobile-menu-item active" onClick={toggleMenu}>
@@ -136,7 +136,7 @@ const Navbar = () => {
             About
           </Link>
 
-          {/* Dropdown Menu for Services */}
+         
           <div className="mobile-dropdown">
             <div className="mobile-dropdown-toggle" onClick={toggleDropdown}>
               Services <FaCaretDown className="mobile-dropdown-btn" />

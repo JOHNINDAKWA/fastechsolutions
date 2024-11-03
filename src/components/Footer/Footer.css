@@ -12,9 +12,10 @@
         center top;
     background-repeat: no-repeat;
     color: #F0F6FF;
-    width: 100%; 
+    width: 100vw; 
     max-width: 1364px;
     margin: auto;
+    overflow-x: hidden;
 }
 
 .footer-container {

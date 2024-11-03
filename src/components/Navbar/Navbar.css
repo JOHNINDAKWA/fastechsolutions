@@ -274,10 +274,12 @@
 
 /* Mobile Navigation Container */
 .Mobile-Nav {
+    display: none;
     position: fixed;
     top: 90px;
+    right: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: max-content;
     background-color: var(--bs-dark);
     display: flex;
@@ -286,7 +288,7 @@
     padding-top: 10px;
     z-index: 900;
     transition: transform 0.3s ease;
-    transform: translateX(0);
+    /* transform: translateX(0); */
   }
   
   .mobile-menu-item, .mobile-menu-item, .mobile-dropdown-toggle {
