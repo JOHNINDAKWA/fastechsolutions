@@ -63,6 +63,26 @@ const Telecom = () => {
               </p>
             </div>
           </div>
+
+          <div className="telecom-service-item item-2">
+
+            <div className="service-content" data-aos="fade-left">
+              <h4>Dedicated Internet Access (DIA)</h4>
+              <p>
+                We provide high-quality, Dedicated Internet Access (DIA) to ISPs
+                and businesses, ensuring fast, reliable, and exclusive internet
+                connections. With our DIA service, you can count on
+                uninterrupted access, consistent speeds, and the security your
+                operations require.
+              </p>
+            </div>
+
+            <img
+              src={Enterprise1}
+              alt="Dedicated Internet Access"
+              data-aos="fade-right"
+            />
+          </div>
         </div>
       </div>
 

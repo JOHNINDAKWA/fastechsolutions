@@ -29,21 +29,27 @@ const Enterprise = () => {
       <div className="enterprise-section">
         <h2 data-aos="fade-left">Enterprise Solutions and Network Support</h2>
         <p className="enterprise-info" data-aos="fade-left">
-          In today’s fast-paced business environment, reliable network support and 
-          security solutions are critical. Our Enterprise Solutions encompass outsourced network 
-          support, CCTV installation, and comprehensive infrastructure setup to help your 
-          organization operate seamlessly and securely.
+          In today’s fast-paced business environment, reliable network support
+          and security solutions are critical. Our Enterprise Solutions
+          encompass outsourced network support, CCTV installation, and
+          comprehensive infrastructure setup to help your organization operate
+          seamlessly and securely.
         </p>
 
         <div className="enterprise-services">
           <div className="enterprise-service-item">
-            <img src={Enterprise1} alt="Network Support" data-aos="fade-right"/>
+            <img
+              src={Enterprise1}
+              alt="Network Support"
+              data-aos="fade-right"
+            />
             <div className="service-content" data-aos="fade-left">
               <h4>Network Support</h4>
               <p>
-                Our team provides end-to-end network support, ensuring your business runs 
-                smoothly with minimal downtime. We manage and troubleshoot network issues 
-                proactively, giving you peace of mind.
+                Our team provides end-to-end network support, ensuring your
+                business runs smoothly with minimal downtime. We manage and
+                troubleshoot network issues proactively, giving you peace of
+                mind.
               </p>
             </div>
           </div>
@@ -52,26 +58,34 @@ const Enterprise = () => {
             <div className="service-content" data-aos="fade-left">
               <h4>CCTV Installation and Maintenance</h4>
               <p>
-                We offer expert CCTV installation and maintenance services to enhance your 
-                business security. Our team ensures that all systems are set up for optimal 
-                monitoring and maintained for uninterrupted protection.
+                We offer expert CCTV installation and maintenance services to
+                enhance your business security. Our team ensures that all
+                systems are set up for optimal monitoring and maintained for
+                uninterrupted protection.
               </p>
             </div>
-            <img src={Enterprise2} alt="CCTV Security" data-aos="fade-right"/>
+            <img src={Enterprise2} alt="CCTV Security" data-aos="fade-right" />
           </div>
 
           <div className="enterprise-service-item">
-            <img src={bitdefenderImage} alt="Infrastructure Solutions" data-aos="fade-right"/>
+            <img
+              src={bitdefenderImage}
+              alt="Infrastructure Solutions"
+              data-aos="fade-right"
+            />
             <div className="service-content" data-aos="fade-left">
               <h4>Infrastructure Solutions</h4>
               <p>
-                From planning to implementation, we provide customized infrastructure 
-                solutions tailored to your business requirements. Our services cover 
-                everything from structured cabling to server setup, ensuring your 
-                infrastructure supports seamless operations.
+                From planning to implementation, we provide customized
+                infrastructure solutions tailored to your business requirements.
+                Our services cover everything from structured cabling to server
+                setup, ensuring your infrastructure supports seamless
+                operations.
               </p>
             </div>
           </div>
+
+
         </div>
       </div>
 
@@ -81,8 +95,8 @@ const Enterprise = () => {
             <h3>Testimonial</h3>
             <h2>What Our Clients Say</h2>
             <p>
-              Here’s what our clients say about our reliable network support and 
-              enterprise solutions, and how our services have helped enhance 
+              Here’s what our clients say about our reliable network support and
+              enterprise solutions, and how our services have helped enhance
               their operations.
             </p>
             <Link to={"/contact"}>Contact Us Today</Link>
@@ -106,9 +120,9 @@ const Enterprise = () => {
               </div>
               <div className="bottom-card">
                 <p>
-                  The team at Fastech Solutions helped set up our network infrastructure, 
-                  ensuring it runs seamlessly. Their support is always on point, 
-                  and their expertise really shows.
+                  The team at Fastech Solutions helped set up our network
+                  infrastructure, ensuring it runs seamlessly. Their support is
+                  always on point, and their expertise really shows.
                 </p>
               </div>
             </div>
@@ -130,9 +144,9 @@ const Enterprise = () => {
               </div>
               <div className="bottom-card">
                 <p>
-                  The CCTV installation service was efficient, and their team is 
-                  incredibly responsive. We feel more secure knowing we’re covered 
-                  by such reliable professionals.
+                  The CCTV installation service was efficient, and their team is
+                  incredibly responsive. We feel more secure knowing we’re
+                  covered by such reliable professionals.
                 </p>
               </div>
             </div>
@@ -167,18 +181,19 @@ const Enterprise = () => {
 
         <h3>The Importance of Reliable Enterprise Solutions</h3>
         <p>
-          With the increasing complexity of network demands, having a reliable support 
-          system in place is critical for business success. Our experts are dedicated to 
-          providing top-notch solutions that help enhance your infrastructure, ensuring 
-          seamless operations and security for your assets.
+          With the increasing complexity of network demands, having a reliable
+          support system in place is critical for business success. Our experts
+          are dedicated to providing top-notch solutions that help enhance your
+          infrastructure, ensuring seamless operations and security for your
+          assets.
         </p>
 
         <h3>Get in Touch</h3>
         <p>
-          Interested in learning more about our Enterprise Solutions? Contact us today to 
-          discuss how we can help optimize your network and security infrastructure. Our 
-          team is ready to provide insights and solutions to ensure your business 
-          continuity.
+          Interested in learning more about our Enterprise Solutions? Contact us
+          today to discuss how we can help optimize your network and security
+          infrastructure. Our team is ready to provide insights and solutions to
+          ensure your business continuity.
         </p>
       </div>
     </div>

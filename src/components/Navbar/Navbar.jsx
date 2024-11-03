@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
             <div className="social-language">
               <div className="social-links">
-                <a href="#" className="social-link">
+                <a href="https://www.facebook.com/profile.php?id=61550241804576" className="social-link">
                   <FaFacebook />
                 </a>
                 <a href="#" className="social-link">
@@ -88,7 +88,7 @@ const Navbar = () => {
                       Enterprise
                     </Link>
                     <Link to="/telecom" className="dropdown-item">
-                      Telcom
+                      Telco
                     </Link>
                     <Link to="/cyber-security" className="dropdown-item">
                       Cyber Security
@@ -103,9 +103,9 @@ const Navbar = () => {
             </nav>
 
             <div className="nav-buttons">
-              <a href="#" className="btn-get-solution">
+              <Link to="/contact" className="btn-get-solution">
                 Get a Quote
-              </a>
+              </Link>
             </div>
 
 

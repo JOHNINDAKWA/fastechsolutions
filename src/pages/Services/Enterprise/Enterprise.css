@@ -394,6 +394,10 @@
     .testimonial-left h2 {
         font-size: 1.5rem !important;
     }
+    .item-2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 
     .testimonial-left p {
         display: none;

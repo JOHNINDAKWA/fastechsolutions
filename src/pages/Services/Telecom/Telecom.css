@@ -368,6 +368,11 @@
     .telecom-section-2 ul li {
         padding-left: 0;
     }
+
+    .item-2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 /* Responsive Adjustments for Testimonial Section */
