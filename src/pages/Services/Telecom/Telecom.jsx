@@ -104,7 +104,7 @@ const Telecom = () => {
               <div className="top-card">
                 <img src={Testimonial2} alt="Client Testimonial" />
                 <div className="card-test-left">
-                  <h3>Javan Patel</h3>
+                  <h3>Janice Achieng&apos;</h3>
                   <p>Network Engineer</p>
                   <div className="stars">
                     <CiStar />

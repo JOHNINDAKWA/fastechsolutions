@@ -107,7 +107,7 @@ const Enterprise = () => {
               <div className="top-card">
                 <img src={Testimonial2} alt="Client Testimonial" />
                 <div className="card-test-left">
-                  <h3>Jordan Waiyaki</h3>
+                  <h3>Janice Ochieng&apos;</h3>
                   <p>Network Engineer</p>
                   <div className="stars">
                     <CiStar />

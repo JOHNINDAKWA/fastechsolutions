@@ -97,7 +97,7 @@ const CyberSecurity = () => {
               <div className="top-card">
                 <img src={Testimonial1} alt="" />
                 <div className="card-test-left">
-                  <h3>John Kulundu</h3>
+                  <h3>Janice Ochieng&apos;</h3>
                   <p>Developer</p>
                   <div className="stars">
                     <CiStar />
@@ -122,7 +122,7 @@ const CyberSecurity = () => {
               <div className="top-card">
                 <img src={Testimonial2} alt="" />
                 <div className="card-test-left">
-                  <h3>John Kulundu</h3>
+                  <h3>Mercy Wairimu</h3>
                   <p>Developer</p>
                   <div className="stars">
                     <CiStar />
