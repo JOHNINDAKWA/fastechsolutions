@@ -114,13 +114,9 @@ const Contact = () => {
         <div className="contact-bottom">
           <figure>
             <iframe
-              title="Fastech Solutions Location"
+              title="Fastech Solutions Locations"
               width="100%"
               height="450"
-              frameBorder="0"
-              scrolling="no"
-              marginHeight="0"
-              marginWidth="0"
               src="https://www.google.com/maps/d/u/0/embed?mid=1ctDDBPt0XM5PeK4TcjelqytqMAYYhkw&ehbc=2E312F&noprof=1"
             ></iframe>
           </figure>
