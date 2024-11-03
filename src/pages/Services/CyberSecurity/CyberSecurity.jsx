@@ -5,7 +5,7 @@ import sophosImage from "../../../assets/images/about3.jpg";
 import bitdefenderImage from "../../../assets/images/dale.png";
 import { IoCheckmarkDone } from "react-icons/io5";
 import { CiStar } from "react-icons/ci";
-import Testimonial1 from "../../../assets/images/testimonial-1.jpg";
+import Testimonial1 from "../../../assets/images/joan.jpg";
 import Testimonial2 from "../../../assets/images/testimonial.jpg";
 
 const CyberSecurity = () => {
@@ -108,7 +108,7 @@ const CyberSecurity = () => {
               <div className="top-card">
                 <img src={Testimonial1} alt="" />
                 <div className="card-test-left">
-                  <h3>Janice Ochieng&apos;</h3>
+                  <h3>Joan Nduta&apos;</h3>
                   <p>Data Analyst</p>
                   <div className="stars">
                     <CiStar />
