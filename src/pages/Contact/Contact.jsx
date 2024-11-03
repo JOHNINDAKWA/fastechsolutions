@@ -121,7 +121,7 @@ const Contact = () => {
               scrolling="no"
               marginHeight="0"
               marginWidth="0"
-              src="https://www.google.com/maps/d/embed?mid=1ivkI7Yvo8XowNwVOdfQBPNNpjAy7Zrg&ehbc=2E312F"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1ctDDBPt0XM5PeK4TcjelqytqMAYYhkw&ehbc=2E312F&noprof=1"
             ></iframe>
           </figure>
         </div>
