@@ -7,7 +7,7 @@ const AboutSection = () => {
   return (
     <div className="about-section">
       <div className="about-left">
-        <img src={about1} alt="" data-aos="zoom-in"/>
+        <img src={about1} alt=""/>
       </div>
       <div className="about-right">
         <h3 data-aos="fade-left">About Us</h3>
