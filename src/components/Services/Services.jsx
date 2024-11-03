@@ -2,6 +2,7 @@ import "./Services.css";
 import { SiAdobeacrobatreader } from "react-icons/si";
 import { SiAccusoft } from "react-icons/si";
 import { SiAffine } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -31,7 +32,8 @@ const Services = () => {
             security, and cabling solutions allows us to cater to the diverse
             requirements of our clients.
           </p>
-          <a href="/enterprise">Discover More</a>
+          <Link to={"/enterprise"}>Discover More</Link>
+
         </div>
         <div className="service-item service-item-active" data-aos="zoom-in">
           <span>
@@ -45,7 +47,8 @@ const Services = () => {
             services are designed to protect your valuable assets, ensuring your
             organization operates securely and efficiently.
           </p>
-          <a href="/cyber-security">Discover More</a>
+          <Link to={"/cyber-security"}>Discover More</Link>
+
         </div>
         <div className="service-item" data-aos="fade-left">
           <span>
@@ -59,7 +62,7 @@ const Services = () => {
             Whether you need assistance with network design and optimization,
             Turnkey installations.
           </p>
-          <a href="/telecom">Discover More</a>
+          <Link to={"/telecom"}>Discover More</Link>
         </div>
       </div>
     </div>
