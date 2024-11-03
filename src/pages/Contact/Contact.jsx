@@ -42,7 +42,7 @@ const Contact = () => {
             </p>
 
             <div className="contact-social-link">
-              <a href="#" className="social-link2">
+              <a href="https://www.facebook.com/profile.php?id=61550241804576" className="social-link2">
                 <FaFacebook />
               </a>
               <a href="#" className="social-link2">
@@ -74,7 +74,7 @@ const Contact = () => {
                   <FaEnvelope className="contact-info-icon" />
                   <div className="item-contact">
                     <h3>Mail Us</h3>
-                    <span className="span1">fastech@gmail.com</span>
+                    <span className="span1">fastech248@gmail.com</span>
                   </div>
                 </div>
 

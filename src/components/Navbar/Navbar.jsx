@@ -34,13 +34,13 @@ const Navbar = () => {
             <div className="location-email">
               <div className="location">
                 <a href="#" className="location-link">
-                  <FaPhone className="icon-phone" /> +254702207999
+                  <FaPhone className="icon-phone" /> 0748764766 | 0716016706
                 </a>
               </div>
               <div className="separator"></div>
               <div className="email">
                 <a href="mailto:example@gmail.com" className="email-link">
-                  <FaEnvelope className="icon-envelope" /> fastechsolutions@gmail.com
+                  <FaEnvelope className="icon-envelope" /> fastech248@gmail.com
                 </a>
               </div>
             </div>

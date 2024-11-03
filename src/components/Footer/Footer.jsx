@@ -36,7 +36,7 @@ const Footer = () => {
             </p>
             <p>
               <FaEnvelope className="footer-icon" />
-              fastech@solutions.com
+              fastech248@gmail.com
             </p>
             <div className="footer-social footer-col">
               <a className="btn btn-social" href="">
