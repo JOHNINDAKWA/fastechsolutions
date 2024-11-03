@@ -318,6 +318,9 @@
     .footer-title {
         font-size: 1.5rem;
     }
+    .popular-link{
+        display: none;
+    }
 
     .footer-column2 img {
         width: 100px;

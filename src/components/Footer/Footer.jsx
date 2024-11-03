@@ -71,7 +71,7 @@ const Footer = () => {
               Career
             </a>
           </div>
-          <div className="footer-column footer-col" data-aos="fade-up">
+          <div className="footer-column footer-col popular-link" data-aos="fade-up">
             <h4 className="footer-title">Popular Link</h4>
             <Link className="btn btn-link" to="/about">
               About Us
