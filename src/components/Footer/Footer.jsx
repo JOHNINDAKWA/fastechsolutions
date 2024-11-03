@@ -53,7 +53,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="footer-column footer-col social-link" data-aos="fade-up">
+          <div className="footer-column footer-col social-link-s" data-aos="fade-up">
             <h4 className="footer-title">Quick Link</h4>
             <a className="btn btn-link" href="">
               Home
