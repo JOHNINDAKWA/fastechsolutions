@@ -274,6 +274,12 @@
 @media (max-width: 992px) {
     .footer {
         padding-top: 6rem;
+
+        background-position:
+            left 0px bottom 0px,
+            right 0px top 50%,
+            left top;
+
     }
 
   
@@ -340,16 +346,19 @@
         font-size: 1.2rem;
     }
 
+    .footer-row{
+        gap: 0;
+    }
+
     .footer-copyright {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-bottom: 0;
     }
 
     .footer-menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+        display: none;
     }
 
     .footer-menu a {
