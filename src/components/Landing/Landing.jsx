@@ -8,19 +8,21 @@ import { Link } from "react-router-dom";
 
 const imagesAndContent = [
   {
-    image: image1,
-    title: "Telecommunication Solutions",
-    heading: "Fiber Internet Provision for Reliable Connectivity",
-    description:
-      "Offering high-speed fiber internet, robust support for SMEs, and tailored network solutions to meet diverse business needs.",
-  },
-  {
     image: image3,
     title: "Enterprise Solutions",
     heading: "Comprehensive Network Support and CCTV Services",
     description:
       "Providing outsourced network support, CCTV installation and maintenance, and end-to-end network infrastructure for seamless operations.",
   },
+  
+  {
+    image: image1,
+    title: "Telecommunication Solutions",
+    heading: "Fiber Internet Provision for Reliable Connectivity",
+    description:
+      "Offering high-speed fiber internet, robust support for SMEs, and tailored network solutions to meet diverse business needs.",
+  },
+
   {
     image: image2,
     title: "Cyber Security Solutions",

@@ -1,5 +1,5 @@
 import './AboutSection.css'
-import about1 from "../../assets/images/about.png";
+import about1 from "../../assets/images/about.jpg";
 import { MdStarPurple500 } from "react-icons/md";
 import { FaAward } from "react-icons/fa";
 
