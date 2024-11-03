@@ -42,7 +42,10 @@ const Contact = () => {
             </p>
 
             <div className="contact-social-link">
-              <a href="https://www.facebook.com/profile.php?id=61550241804576" className="social-link2">
+              <a
+                href="https://www.facebook.com/profile.php?id=61550241804576"
+                className="social-link2"
+              >
                 <FaFacebook />
               </a>
               <a href="#" className="social-link2">
@@ -111,12 +114,14 @@ const Contact = () => {
         <div className="contact-bottom">
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d140679.9951403412!2d36.99461739604087!3d-1.126513691018706!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1708677792152!5m2!1sen!2ske"
+              title="Fastech Solutions Location"
+              width="100%"
               height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              frameBorder="0"
+              scrolling="no"
+              marginHeight="0"
+              marginWidth="0"
+              src="https://www.google.com/maps/d/embed?mid=1ivkI7Yvo8XowNwVOdfQBPNNpjAy7Zrg&ehbc=2E312F"
             ></iframe>
           </figure>
         </div>
