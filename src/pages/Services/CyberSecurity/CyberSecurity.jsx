@@ -17,7 +17,7 @@ const CyberSecurity = () => {
           <div className="service-banner-links">
             <Link to={"/"}>Home</Link>
             <div className="service-separator"></div>
-            <Link to={"/"}>Pages</Link>
+            <Link to={"/"}>Services</Link>
             <div className="service-separator"></div>
             <Link to={"/cyber-security"} className="active">
               Cyber Security

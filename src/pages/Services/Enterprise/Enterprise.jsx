@@ -17,7 +17,7 @@ const Enterprise = () => {
           <div className="service-banner-links">
             <Link to={"/"}>Home</Link>
             <div className="service-separator"></div>
-            <Link to={"/"}>Pages</Link>
+            <Link to={"/"}>Services</Link>
             <div className="service-separator"></div>
             <Link to={"/enterprise"} className="active">
               Enterprise Solutions
