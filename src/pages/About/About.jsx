@@ -109,7 +109,9 @@ const About = () => {
               harness the power of technology with expertise and reliability.
             </p>
 
-            <button>Contact Us</button>
+            <Link to={"/contact"}>
+              Contact Us
+            </Link>
           </div>
         </div>
 

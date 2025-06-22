@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import './Banner.css';
 
 const Banner = () => {
@@ -12,7 +13,7 @@ const Banner = () => {
           <h1 className="" data-aos="fade-right">We provide professional IT services for our customers.</h1>
         </div>
         <div className="banner-button-container" data-aos="fade-left">
-          <a className="btn-explore" href="#">EXPLORE MORE</a>
+          <Link className="btn-explore" to={"/web-development"}>EXPLORE MORE</Link>
         </div>
       </div>
     </div>

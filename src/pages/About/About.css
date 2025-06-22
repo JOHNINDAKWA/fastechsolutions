@@ -6,8 +6,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
-    padding-top: 6rem; 
-    padding-bottom: 6rem; 
+    padding-top: 2rem; 
+    padding-bottom: 2rem; 
     margin-bottom: 5rem;
 }
 
@@ -126,7 +126,7 @@
     text-align: left;
 }
 
-button {
+.about-feature a {
     padding: 12px 25px;
     font-size: 1rem;
     font-weight: 700;
@@ -136,9 +136,10 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s;
+     text-decoration: none;
 }
 
-button:hover {
+.about-feature a :hover {
     background-color: #064f02;
     transform: scale(1.05);
 }
