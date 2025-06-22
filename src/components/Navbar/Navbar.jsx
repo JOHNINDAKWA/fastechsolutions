@@ -93,9 +93,7 @@ const Navbar = () => {
                   </Link>
                   {servicesDropdownOpen && (
                     <div className="services-mega-menu">
-                      <div className="services-mega-menu-image-container">
-                        <img src={servicesMegaMenuImage} alt="Our Services" className="services-mega-menu-image" />
-                      </div>
+                     
                       <div className="services-mega-menu-grid"> {/* Renamed class to reflect grid/row layout */}
                         <Link to="/enterprise" className="services-mega-menu-item">
                           <FaBuilding className="mega-menu-item-icon" />
@@ -125,6 +123,9 @@ const Navbar = () => {
                             <p>Custom websites and web applications.</p>
                           </div>
                         </Link>
+                      </div>
+                       <div className="services-mega-menu-image-container">
+                        <img src={servicesMegaMenuImage} alt="Our Services" className="services-mega-menu-image" />
                       </div>
                     </div>
                   )}

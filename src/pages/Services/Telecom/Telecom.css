@@ -322,6 +322,25 @@
     margin-top: 15px;
 }
 
+.tele-div-img{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.tele-img{
+    width: 50%;
+    
+}
+
+.tele-img img{
+    height: auto;
+    width: 400px;
+    border-radius: 12px;
+
+}
+
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .testimonial {
@@ -332,6 +351,19 @@
     .testimonial-right {
         max-width: 100%;
     }
+
+    .tele-div-img{
+    flex-direction: column-reverse;
+    
+}
+
+.tele-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 }
 
 

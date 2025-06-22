@@ -231,11 +231,11 @@ const portfolioProjects = [
           <p data-aos="fade-up" data-aos-delay="100">We build fast, secure, and scalable websites tailored to your needs.</p>
           <div className="web-hero-ctas-new" data-aos="fade-up">
             <Link to="/contact" className="hero-btn-new primary-btn-new">
-              Get a Free Quote <FaArrowRight />
+              Get a Quote Today <FaArrowRight />
             </Link>
-            <Link to="/portfolio" className="hero-btn-new secondary-btn-new">
+            <a href="#portfolio" className="hero-btn-new secondary-btn-new">
               See Our Work <FaArrowRight />
-            </Link>
+            </a>
           </div>
         </div>
         <div className="web-hero-illustration" data-aos="fade-left">
@@ -245,29 +245,31 @@ const portfolioProjects = [
       </div>
 
       {/* 2. What We Offer */}
-      <section className="web-section what-we-offer-new">
-        <h2 className="section-title" data-aos="fade-up">Our Web Development Services Include:</h2>
-        <div className="services-grid-new">
-          {servicesOffered.map((service, index) => (
-            <div
-              className={`service-card-new ${index % 2 === 0 ? 'card-color-variant-1' : 'card-color-variant-2'}`} /* Alternating colors */
-              key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 70} /* Slightly increased delay for more visual distinction */
-            >
-              <div className="service-card-icon-new">
-                <service.icon className="icon-main" />
-              </div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              {/* Optional: Add a "Learn More" link here if needed per card */}
-              <Link to={service.link || '#'} className="service-card-link-new">
-                Learn More <FaArrowRight />
-              </Link> 
-            </div>
-          ))}
+<section className="web-section web-services-modern">
+  <h2 className="section-title" data-aos="fade-up">
+    Our Web Development Services Include:
+  </h2>
+  <div className="web-service-cards">
+    {servicesOffered.map((service, index) => (
+      <div
+        className="web-service-card"
+        key={index}
+        data-aos="fade-up"
+        data-aos-delay={index * 80}
+      >
+        <div className="web-service-icon">
+          <service.icon />
         </div>
-      </section>
+        <h3>{service.title}</h3>
+        <p>{service.description}</p>
+        <Link to={service.link || "#"} className="web-service-link">
+          Learn More <FaArrowRight />
+        </Link>
+      </div>
+    ))}
+  </div>
+</section>
+
 
 {/* 3. Technologies We Use - NEW DESIGN */}
       <section className="web-section technologies-we-use-new">
@@ -295,7 +297,7 @@ const portfolioProjects = [
       </section>
 
       {/* 4. Portfolio or Showcase */}
-      <section className="web-section portfolio-showcase">
+      <section id="portfolio" className="web-section portfolio-showcase">
         <h2 className="section-title" data-aos="fade-up">
           Some Projects We have Delivered
         </h2>

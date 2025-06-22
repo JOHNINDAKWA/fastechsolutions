@@ -119,10 +119,7 @@ const Footer = () => {
             <a className="footer-link" href="#">
               Fastech Solutions
             </a>
-            , All Right Reserved. Designed By{" "}
-            <a className="footer-link2" href="https://johhnindakwa.vercel.app" target="_blank" rel="noopener noreferrer">
-              Jindakwa
-            </a>
+            , All Right Reserved. 
           </div>
           <div className="footer-col bottom-menu">
             <Link to="/">Home</Link>
