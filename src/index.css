@@ -24,8 +24,33 @@ body{
     --bs-dark: #0E121D;
     --secondary:rgb(31, 164, 1);
 
+    --cta-gradient-start: #5c20c0;
+  --cta-gradient-end: #2b3990;
+
+  --subtle-primary: #63bf4e;/* Soft Teal */
+  --light-background: #fff;
+  --card-white-bg: #fff;
+  --card-colored-bg: var(--subtle-primary);
+  --card-colored-text: #fff;
+
+  --light-background: #f8f9fa; /* Consistent light background */
+
+/* Option 3: Lush & Modern */
+--card-bg-gradient-1-start: #11998e; /* Dark Teal Green */
+--card-bg-gradient-1-end: #38ef7d;   /* Bright Green */
+
+--card-bg-gradient-2-start: #8a2be2;  /* Deep Purple */
+--card-bg-gradient-2-end: #F68A0A; /* Blue Violet */
+
+--card-bg-gradient-3-start: #fc00ff; /* Bright Pink-Purple */
+--card-bg-gradient-3-end: #00dbde;   /* Bright Cyan */
+
+    --wave-color-1: #d3c7f1; /* Lighter purple wave */
+    --wave-color-2: #c7f1d3; /* Lighter green wave */
 }
 
 html{
     scroll-behavior: smooth;
 }
+
+

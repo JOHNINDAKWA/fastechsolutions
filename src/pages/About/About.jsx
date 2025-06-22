@@ -2,8 +2,8 @@ import "./About.css";
 import { Link } from "react-router-dom";
 import { SiAlmalinux } from "react-icons/si";
 import { SiAmazonluna } from "react-icons/si";
-import MainImage from "../../assets/images/about-main.jpg";
-import aboutsec from "../../assets/images/about-sec.jpg";
+import aboutsec from "../../assets/images/it-sols.png";
+import MainImage from "../../assets/images/fast.png";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import Banner from "./../../components/Banner/Banner";
 

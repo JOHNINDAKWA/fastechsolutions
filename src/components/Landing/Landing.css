@@ -1,418 +1,422 @@
-.home-container {
-    display: flex;
-    height: 80vh;
+/* Main Landing Section Container */
+.landing-hero {
     position: relative;
+    width: 100%;
+    min-height: 85vh; 
+    height: auto; 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     overflow: hidden;
-    width: 100vw;
+    box-sizing: border-box;
+    transition: background-image 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 40px; 
 }
 
-.left-image {
-    background-image: url('../../assets/images/carousel-3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top right;
+/* Overlay for darkening the background image */
+.landing-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-}
-
-.left-image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 1; 
-}
-
-.right-image {
-    background-image: url('../../assets/images/header-2.jpg');
-    clip-path: polygon(37% 0%, 100% 0%, 100% 100%, 0% 100%);
-    filter: grayscale(10%);
-    transform: scale(100% - 50%);
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: 58%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    transition: background-image 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
-.content{
+/* Landing Content (Heading, Description, Button) - Animated */
+.landing-content {
+    position: relative;
+    top: auto;
+    left: 0;
+    /* Use padding to control distance from edges. Removing fixed positioning. */
+    padding: 120px 80px 0 80px;
+    z-index: 2;
+    font-family: "Raleway", sans-serif;
+    text-align: left; /* Always left-align content text */
+    box-sizing: border-box;
+    width: 100%; /* Ensures it can take full width up to max-width */
+    /* REMOVED: margin: 0 auto; This was causing the block to center */
+}
+
+.landing-content h1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: left; 
+    max-width: 800px;
+}
+
+.landing-content h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left; /* Explicitly ensure h4 is left-aligned */
+}
+
+.landing-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: left; /* Explicitly ensure p is left-aligned */
+}
+
+.landing-content .highlight-text {
+    color: var(--primary-color);
+}
+
+.start-project-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    font-family: "Raleway", sans-serif;
+}
+
+.start-project-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Service Boxes Container - Animated */
+.service-boxes-container {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Default 6 columns for very large screens */
+    gap: 15px;
+    padding: 0 80px; /* Consistent horizontal padding with content */
+    margin-top: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.service-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 25px;
+    min-height: 180px; /* Ensure sufficient height for description visibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    font-family: "Raleway", sans-serif;
+    text-align: left; /* Always left-align text within the box */
+}
+
+.service-box:hover {
+    background-color: rgba(246, 138, 10, 0.3);
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.service-box .box-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+}
+
+.service-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    /* No 'display: none;' here or height limits that would hide it. */
+}
+
+
+/* Navigation Arrows (Left/Right) */
+.nav-arrow {
     position: absolute;
     top: 50%;
-    left: 43%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    color: white;
-    z-index: 5;
+    transform: translateY(-50%);
+    background: rgba(246, 138, 10, 0.8);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-.content h4{
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    font-family: "Jost", sans-serif;
-    line-height: 1.2;
+.nav-arrow:hover {
+    background-color: #ff9933;
+    transform: translateY(-50%) scale(1.1);
 }
 
-.content h1{
-    margin-bottom: 1.5rem;
-    font-size: 4.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    font-family: "Jost", sans-serif;
-}
-.content p{
-    margin-bottom: 3rem;
-    font-size: 1.25rem;
-    width: 60%;
+.left-arrow {
+    left: 15px;
+    box-shadow: 0 4px 15px rgba(246, 138, 10, 0.4);
 }
 
-.navigation-buttons {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+.right-arrow {
+    right: 15px;
+    box-shadow: 0 4px 15px rgba(246, 138, 10, 0.4);
+}
+
+/* Progress Indicators (Dots) */
+.progress-indicators-container {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    z-index: 3;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.progress-indicators {
     display: flex;
     gap: 10px;
-    z-index: 3;
-}
-
-.home-btn {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.home-btn .btn-about, .home-btn .btn-contact {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: white;
-    padding: 16px 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.home-btn .btn-about {
-    background: #F68A0A;
-}
-
-.home-btn .btn-contact {
-    background: rgb(31, 164, 1);
-}
-
-.home-btn .btn-about:hover, .home-btn .btn-contact:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.home-btn .btn-about:active, .home-btn .btn-contact:active {
-    transform: translateY(2px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-.home-btn .btn-about:hover {
-    background: #e57c09;
-}
-
-.home-btn .btn-contact:hover {
-    background: rgb(26, 144, 2);
-}
-
-
-.nav-button {
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    color: black;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
     justify-content: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
 }
 
-.nav-button:hover {
-    background: rgba(255, 255, 255, 1);
-}
-
-.hero-shape-1 {
-    background-color: #F68A0A;
-    width: 150px;
-    height: 90%;
-    position: absolute;
-    left: 58%;
-    top: 0;
-    transform: translateY(-50%) skew(-26deg, 0deg);
-    z-index: 2;
-}
-
-.hero-shape-1:before {
-    background-color: #0E121D;
-    content: "";
-    width: 50%;
-    height: 90%;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.hero-shape-2 {
-    background-color: #0E121D;
-    width: 150px;
-    height: 100%;
-    position: absolute;
-    right: 52%;
-    bottom: 0;
-    transform: translateY(50%) skew(-25deg, 0deg);
-    z-index: 2;
-}
-
-.hero-shape-2::after {
-    background-color: #F68A0A;
-    content: "";
-    width: 75px;
-    height: 90%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+.dot.active {
+    background-color: var(--primary-color);
+    width: 25px;
+    border-radius: 5px;
 }
 
 
-/* Media Query: For screens 1200px and below */
+/* Media Queries for Responsiveness */
+
+/* Adjusting for screens <= 1400px (Desktop / Large Tablet) */
 @media (max-width: 1400px) {
-  .content h1 {
-    font-size: 2.2rem;
-
-  }
-
+    .landing-content {
+        padding: 100px 60px 0 60px;
+    }
+    .landing-content h1 {
+        font-size: 56px;
+    }
+    .service-boxes-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+        gap: 20px;
+        padding: 0 60px;
+        margin-top: 50px;
+    }
+    /* Show first 4 boxes */
+    .service-box { display: flex; }
+    .service-box:nth-child(n+5) { /* Hides boxes from the 5th one onwards */
+        display: none;
+    }
 }
+
+/* Adjusting for screens <= 1200px (Desktop / Large Tablet) */
 @media (max-width: 1200px) {
-
-  
-    .home-container {
-      height: 70vh;
+    .landing-content {
+        padding: 80px 40px 0 40px;
     }
-  
-    .content h1 {
-      font-size: 3.5rem;
+    .landing-content h1 {
+        font-size: 48px;
     }
-  
-    .content p {
-      width: 70%;
-      font-size: 1.1rem;
+    .service-boxes-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 15px;
+        padding: 0 40px;
+        margin-top: 40px;
     }
-  
-    .navigation-buttons {
-      bottom: 15px;
+    .service-box {
+        min-height: 160px;
+        padding: 20px;
+        display: flex;
     }
-
-
-  }
-  
-  /* Media Query: For screens between 991px and 768px */
-  @media (max-width: 991px) {
-    .left-image {
+    .service-box .box-number {
+        font-size: 24px;
+    }
+    .service-box h3 {
+        font-size: 16px;
+    }
+    .service-box p {
+        font-size: 13px;
+    }
+    /* Show first 3 boxes */
+    .service-box:nth-child(n+5) { /* Hides boxes from the 4th one onwards */
         display: none;
-      }
-    
-      .hero-shape-1,
-      .hero-shape-2 {
+    }
+}
+
+/* Adjusting for screens <= 992px (Medium Tablet - now showing 3 boxes) */
+@media (max-width: 992px) {
+    .landing-hero {
+        min-height: 70vh;
+    }
+    .landing-content {
+        padding: 60px 30px 0 30px;
+        max-width: 100%;
+    }
+    .landing-content h1 {
+        font-size: 42px;
+    }
+    .landing-content h4 {
+        font-size: 18px;
+    }
+    .landing-content p {
+        font-size: 16px;
+    }
+    .start-project-btn {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+
+    .service-boxes-container {
+        grid-template-columns: repeat(3, 1fr); /* KEEPING 3 columns here */
+        gap: 20px;
+        padding: 0 30px;
+        margin-top: 30px;
+    }
+    .service-box {
+        min-height: 180px;
+        padding: 25px;
+        display: flex;
+    }
+    /* Reset any previous staggering for 3-column layout */
+    .service-boxes-container .service-box {
+        margin-top: 0 !important;
+    }
+    /* Show first 3 boxes */
+    .service-box:nth-child(n+4) { /* Hides boxes from the 4th one onwards */
         display: none;
-      }
-    .home-container {
-      height: 65vh;
-      flex-direction: column;
-    }
-  
-    .right-image {
-      width: 100%;
-      clip-path: none;
-      height: 100%;
     }
 
-
-    .right-image::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); 
-        z-index: 1; 
+    /* Keep navigation arrows visible but adjust position */
+    .left-arrow { left: 10px; }
+    .right-arrow { right: 10px; }
+    .nav-arrow {
+        font-size: 14px;
+        padding: 4px 8px;
     }
-  
-    .content {
-        position: absolute; 
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
-        text-align: left;
+}
+
+/* Adjusting for screens <= 768px (Small Tablet / Landscape Mobile - now showing 2 boxes) */
+@media (max-width: 768px) {
+    .landing-hero {
+        min-height: 60vh;
+        padding-bottom: 30px;
+    }
+    .landing-content {
+        padding: 50px 20px 0 20px;
+    }
+    .landing-content h1 {
+        font-size: 36px;
+    }
+    .landing-content p {
+        font-size: 15px;
+    }
+    .service-boxes-container {
+        grid-template-columns: repeat(2, 1fr); /* Changing to 2 columns */
+        gap: 15px;
         padding: 0 20px;
-        width: 90%;
+        margin-top: 25px;
     }
-  
-    .content h1 {
-      font-size: 2rem;
-
+    .service-box {
+        min-height: auto;
+        padding: 20px;
+        display: flex;
     }
-  
-    .content p {
-      font-size: 1rem;
-      width: 90%;
-      margin: 0 auto;
+    /* Staggering effect for 2-column layout */
+    .service-boxes-container .service-box:nth-child(even) { /* Targets 2nd, 4th, 6th... */
+        margin-top: 20px;
     }
-  
-    .navigation-buttons {
-      bottom: 10px;
+    .service-boxes-container .service-box:nth-child(odd) { /* Targets 1st, 3rd, 5th... */
+        margin-top: 0;
     }
-    .home-btn{
-        /* justify-content: center; */
-        margin-top: 1rem;
-    }
- .btn-about,
-   .btn-contact {
-      font-size: 1rem;
-      padding: 12px 20px;
-    }
-
-
-  }
-  
-  /* Media Query: For screens between 767px and 576px */
-  @media (max-width: 767px) {
-    .home-container {
-      height: 65vh;
-      flex-direction: column;
-    }
-  
-    .right-image {
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-    }
-  
-    .content {
-      /* width: 90%;
-      text-align: center;
-      position: relative;
-      top: auto;
-      left: auto;
-      transform: translateY(0); */
-
-
-      width: 90%;
-      position: absolute; 
-      top: 42%;
-      left: 50%;
-      transform: translate(-50%, -50%); 
-      text-align: left;
-      padding: 0 20px;
-    }
-  
-    .content h4 {
-      font-size: 1.8rem;
-    }
-  
-    .content h1 {
-      
+    /* Show first 2 boxes */
+    .service-box:nth-child(n+4) { /* Hides boxes from the 3rd one onwards */
         display: none;
     }
-  
-    .content p {
-      font-size: 1.3rem;
-      width: 100%;
-    }
-  
-    .home-btn .btn-about,
-    .home-btn .btn-contact {
-      font-size: 1rem;
-      padding: 12px 20px;
-    }
-  
-    .navigation-buttons {
-      bottom: 20px;
-    }
-  
-    .nav-button {
-      width: 36px;
-      height: 36px;
-      font-size: 1rem;
-    }
-  }
-  
-  /* Media Query: For screens under 576px */
-  @media (max-width: 576px) {
-    .home-container {
-      height: 65vh;
-      /* padding-top: 60px; */
-    }
-  
-    .right-image {
-      height: 100%;
-      clip-path: none;
-    }
-  
-    .content {
-      width: 90%;
-      text-align: center;
-      padding: 0 10px;
-      margin-top: -10px;
-      text-align: left;
 
-
-      /* width: 90%;
-      position: absolute; 
-      top: 35%;
-      left: 50%;
-      transform: translate(-50%, -50%); 
-      text-align: center;
-      padding: 0 20px; */
-
-      
+    /* Adjust dots for grid layout */
+    .progress-indicators-container {
+        margin-top: 25px;
     }
-  
-    .content h4 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
-  
-    .content h1 {
-      
+
+    /* Hide navigation arrows if space is very constrained */
+    .nav-arrow {
         display: none;
     }
-  
-    .content p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      /* width: 70%; */
-    }
-  
-    .home-btn .btn-about,
-    .home-btn .btn-contact {
-      font-size: 0.9rem;
-      padding: 10px 16px;
-    }
-  
-    .nav-button {
-      width: 32px;
-      height: 32px;
-    }
+}
 
-    .navigation-buttons {
-        bottom: 30px;
-      }
-  }
-  
+/* Adjusting for screens <= 576px (Portrait Mobile - now showing 1 box) */
+@media (max-width: 576px) {
+    .landing-hero {
+        min-height: 50vh;
+    }
+    .landing-content {
+        padding: 40px 15px 0 15px;
+    }
+    .landing-content h1 {
+        font-size: 30px;
+    }
+    .landing-content h4 {
+        font-size: 16px;
+    }
+    .landing-content p {
+        font-size: 14px;
+    }
+    .start-project-btn {
+        padding: 8px 20px;
+        font-size: 15px;
+    }
+    .service-boxes-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 0 15px;
+    }
+    .service-box .box-number {
+        font-size: 24px;
+    }
+    .service-box h3 {
+        font-size: 16px;
+    }
+    .service-box p {
+        font-size: 13px;
+    }
+    /* Remove staggering on single-column layout */
+    .service-boxes-container .service-box:nth-child(even),
+    .service-boxes-container .service-box:nth-child(odd) {
+        margin-top: 0;
+    }
+    /* Show first 1 box */
+    .service-box:nth-child(n+3) { /* Hides boxes from the 2nd one onwards */
+        display: none;
+    }
+}

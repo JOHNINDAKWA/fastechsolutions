@@ -1,98 +1,304 @@
 import { useState, useEffect } from "react";
-import "./Landing.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import image1 from "../../assets/images/header-1.jpg";
-import image2 from "../../assets/images/about-home.jpg";
-import image3 from "../../assets/images/about2.png";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import './Landing.css'; // Styles for the Landing component
 
-const imagesAndContent = [
+// Import your images for the slides
+import image1 from "../../assets/images/aboutt.png"; // Image for Telecommunication Solutions
+import image2 from "../../assets/images/about-home.jpg"; // Image for Cyber Security Solutions
+import image3 from "../../assets/images/happy6.jpg"; // Image for Enterprise Solutions (and intro)
+import image4 from "../../assets/images/web.png"; // Image for Web Development (ensure this file exists!)
+import image5 from "../../assets/images/cctv.jpg"; // Image for Web Development (ensure this file exists!)
+
+
+
+// Default set of service boxes for the intro slide
+const defaultServiceBoxes = [
+  { 
+    number: "01", 
+    title: "Strategic IT Consultation", 
+    description: "Through collaborative discovery, we assess your unique needs and future goals to design a strategic roadmap for robust, integrated solutions across all your IT infrastructure." 
+  },
+  { 
+    number: "02", 
+    title: "Secure System Design", 
+    description: "Crafting intuitive user experiences, resilient network architectures, and robust security blueprints ensures scalable, user-friendly, and protected digital environments." 
+  },
+  { 
+    number: "03", 
+    title: "Expert Implementation & Deployment", 
+    description: "Our skilled teams deliver and integrate cutting-edge technologies, from seamless network setups and security deployments to bespoke web development and communication systems." 
+  },
+  { 
+    number: "04", 
+    title: "Proactive Monitoring & Support", 
+    description: "Ensuring continuous operation and optimized performance, we provide ongoing managed IT services, real-time security monitoring, and reliable telecommunication maintenance." 
+  },
+  { 
+    number: "05", 
+    title: "Advanced Cyber Protection", 
+    description: "Embedding comprehensive cybersecurity measures, we safeguard your valuable assets against evolving threats, ensuring data integrity, privacy, and business continuity across all platforms." 
+  },
+  { 
+    number: "06", 
+    title: "Future-Proofing & Innovation", 
+    description: "We constantly research and integrate emerging technologies, providing adaptable solutions that keep your business agile, competitive, and secure in a rapidly changing digital landscape." 
+  },
+];
+
+// Data for all the slides
+const slides = [
   {
-    image: image3,
+    // Intro slide as per the initial design image
+    heading: "We are a fully integrated <span class='highlight-text'>digital</span> agency.",
+    description: "", // No description for the intro slide
+    image: image3, // Use a suitable background image for the intro
+    isIntro: true, // Flag to identify the intro slide
+    serviceBoxes: defaultServiceBoxes, // Show default service boxes for the intro
+  },
+  {
+    // Enterprise Solutions slide
     title: "Enterprise Solutions",
-    heading: "Comprehensive Network Support and CCTV Services",
+    heading: "Robust Network & CCTV Infrastructure",
     description:
-      "Providing outsourced network support, CCTV installation and maintenance, and end-to-end network infrastructure for seamless operations.",
+      "End-to-end network installation, monitoring, and security support for seamless enterprise operations.",
+    image: image5, // Example image for Enterprise Solutions
+    buttonText: "Learn More",
+    buttonLink: "/enterprise",
+    serviceBoxes: [
+      { number: "01", title: "Network Design", description: "Designing scalable and secure network architectures." },
+      { number: "02", title: "CCTV Installation", description: "Professional installation and integration of surveillance systems." },
+      { number: "03", title: "Data Center Solutions", description: "Building and managing high-performance data centers." },
+      { number: "04", title: "Server Management", description: "Optimizing server performance and ensuring uptime." },
+      { number: "05", title: "VoIP Systems", description: "Implementing reliable Voice over IP communication solutions." },
+      { number: "06", title: "Structured Cabling", description: "Organized and efficient cabling infrastructure for your business." },
+    ],
   },
-  
   {
-    image: image1,
+    // Telecommunication Solutions slide
     title: "Telecommunication Solutions",
-    heading: "Fiber Internet Provision for Reliable Connectivity",
+    heading: "Fiber-Backed Connectivity at Lightning Speed",
     description:
-      "Offering high-speed fiber internet, robust support for SMEs, and tailored network solutions to meet diverse business needs.",
+      "High-speed fiber internet and network resilience tailored for SMEs and business growth.",
+    image: image1, // Example image for Telecom
+    buttonText: "Learn More",
+    buttonLink: "/telecom",
+    serviceBoxes: [
+      { number: "01", title: "Fiber Optic Installation", description: "High-speed and reliable fiber optic network deployment." },
+      { number: "02", title: "Broadband Services", description: "Providing fast and consistent internet access." },
+      { number: "03", title: "Wireless Solutions", description: "Setting up robust and secure wireless networks." },
+      { number: "04", title: "IP Telephony", description: "Modern and efficient voice communication over IP networks." },
+      { number: "05", title: "Network Optimization", description: "Ensuring peak performance of your telecom infrastructure." },
+      { number: "06", title: "Managed Services", description: "Ongoing support and maintenance for your telecom systems." },
+    ],
   },
-
   {
-    image: image2,
+    // Cyber Security Solutions slide
     title: "Cyber Security Solutions",
-    heading: "Protect Your Business with Advanced Security Services",
+    heading: "Secure. Defend. Thrive.",
     description:
-      "Defending against cyber threats with solutions like firewalls, Sophos, and Bitdefender for comprehensive security.",
+      "Protect your business with next-gen firewalls, endpoint security, and intelligent threat prevention.",
+    image: image2, // Example image for Cyber Security
+    buttonText: "Learn More",
+    buttonLink: "/cyber-security",
+    serviceBoxes: [
+      { number: "01", title: "Threat Detection", description: "Proactive identification of potential cyber threats." },
+      { number: "02", title: "Endpoint Protection", description: "Securing all devices connected to your network." },
+      { number: "03", title: "Firewall Management", description: "Configuring and maintaining robust firewall defenses." },
+      { number: "04", title: "Security Audits", description: "Comprehensive assessment of your security vulnerabilities." },
+      { number: "05", title: "Incident Response", description: "Rapid and effective response to security breaches." },
+      { number: "06", title: "Security Training", description: "Educating your team on best cybersecurity practices." },
+    ],
+  },
+  {
+    // New Web Development slide
+    title: "Web Development",
+    heading: "Crafting Stunning & Functional Web Experiences",
+    description:
+      "From sleek designs to robust backend systems, we build dynamic and responsive websites tailored to your vision.",
+    image: image4, // Image for web development
+    buttonText: "Discover Web Solutions",
+    buttonLink: "/web-development",
+    serviceBoxes: [
+      { number: "01", title: "Custom Web Design", description: "Unique and captivating designs tailored to your brand identity." },
+      { number: "02", title: "Responsive Development", description: "Websites that look and perform great on any device." },
+      { number: "03", title: "E-commerce Solutions", description: "Building secure and scalable online stores." },
+      { number: "04", title: "Content Management Systems", description: "Easy-to-use platforms for managing your website content." },
+      { number: "05", title: "Backend Development", description: "Robust server-side logic and database management." },
+      { number: "06", title: "Website Maintenance", description: "Ongoing support and updates to keep your site running smoothly." },
+    ],
   },
 ];
 
 const Landing = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [index, setIndex] = useState(0); // Current slide index
+  const [direction, setDirection] = useState(0); // Direction for Framer Motion animation (1 for next, -1 for prev)
 
-  // Function to go to the next slide
+  // Framer Motion variants for the main content (heading, description, button)
+  const contentVariants = {
+    initial: (direction) => ({
+      opacity: 0,
+      x: direction > 0 ? "100%" : "-100%", // Starts from right or left depending on direction
+    }),
+    animate: {
+      opacity: 1,
+      x: 0, // Moves to center
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 30 }, // Spring animation for X-axis
+        opacity: { duration: 0.5 }, // Fade animation for opacity
+      },
+    },
+    exit: (direction) => ({
+      opacity: 0,
+      x: direction < 0 ? "100%" : "-100%", // Exits to right or left depending on direction
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 30 },
+        opacity: { duration: 0.5 },
+      },
+    }),
+  };
+
+  // Framer Motion variants for the service boxes container
+  const boxContainerVariants = {
+    initial: (direction) => ({
+      opacity: 0,
+      y: direction > 0 ? "50px" : "-50px", // Starts slightly below or above
+    }),
+    animate: {
+      opacity: 1,
+      y: 0, // Moves to final position
+      transition: {
+        y: { type: "spring", stiffness: 200, damping: 20 },
+        opacity: { duration: 0.5 },
+        staggerChildren: 0.1, // Staggers the animation of individual service boxes
+      },
+    },
+    exit: (direction) => ({
+      opacity: 0,
+      y: direction < 0 ? "50px" : "-50px",
+      transition: {
+        y: { type: "spring", stiffness: 200, damping: 20 },
+        opacity: { duration: 0.5 },
+        staggerChildren: 0.05, // Quicker stagger on exit
+      },
+    }),
+  };
+
+  // Framer Motion variant for individual service box items (used with staggerChildren)
+  const itemVariants = {
+    initial: { opacity: 0, y: 20 }, // Starts hidden and slightly below
+    animate: { opacity: 1, y: 0 }, // Fades in and moves to position
+    exit: { opacity: 0, y: 20 } // Fades out and moves down
+  };
+
+  // Handles moving to the next slide
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesAndContent.length);
+    setDirection(1); // Set direction for "next" animation
+    setIndex((prev) => (prev + 1) % slides.length); // Loop back to start if at end
   };
 
-  // Function to go to the previous slide
+  // Handles moving to the previous slide
   const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + imagesAndContent.length) % imagesAndContent.length
-    );
+    setDirection(-1); // Set direction for "previous" animation
+    setIndex((prev) => (prev - 1 + slides.length) % slides.length); // Loop back to end if at start
   };
 
-  // useEffect to handle automatic slide change
+  // Effect for automatic slide transitions
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 8000);
+    const interval = setInterval(nextSlide, 8000); // Change slide every 10 seconds
+    return () => clearInterval(interval); // Clear interval on component unmount or index change
+  }, [index]); // Re-run effect when index changes (resets timer)
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []); // Empty dependency array ensures it runs once on mount
+  const currentSlide = slides[index]; // Get the data for the current slide
 
   return (
-    <div className="home-container">
-      {currentIndex !== 1 && <div className="hero-shape-1"></div>}
-      {currentIndex === 1 && <div className="hero-shape-2"></div>}
+    <section className="landing-hero" style={{ backgroundImage: `url(${currentSlide.image})` }}>
+      {/* Overlay to darken the background image for text readability */}
+      <div className="landing-overlay"></div>
 
-      <div className="left-image" />
-          <div
-            className="right-image"
-            style={{
-              backgroundImage: `url(${imagesAndContent[currentIndex].image})`,
-            }}
-          />
-          <div className="content">
-            <h4 data-aos="fade-right">{imagesAndContent[currentIndex].title}</h4>
-            <h1 data-aos="fade-left">{imagesAndContent[currentIndex].heading}</h1>
-            <p  className="mb-5 fs-5">
-              {imagesAndContent[currentIndex].description}
-            </p>
-            <div className="home-btn" >
-              <Link to="/about" className="btn-about" >
-                Learn More
+      {/* Main content area with animation */}
+      <AnimatePresence initial={false} custom={direction} mode="wait">
+        <motion.div
+          key={index + "main-content"} // Unique key for AnimatePresence to trigger re-render and animation
+          variants={contentVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          custom={direction}
+          className="landing-content"
+        >
+          {/* Conditional rendering for the intro slide vs. other slides */}
+          {currentSlide.isIntro ? (
+            <>
+              {/* Using dangerouslySetInnerHTML to render HTML from the heading string */}
+              <h1 dangerouslySetInnerHTML={{ __html: currentSlide.heading }}></h1>
+              <Link to="/contact" className="start-project-btn">
+                Contact Us Today
               </Link>
-              <Link to="/contact" className="btn-contact" >
-                Contact Us
+            </>
+          ) : (
+            <>
+              {currentSlide.title && <h4>{currentSlide.title}</h4>}
+              <h1>{currentSlide.heading}</h1>
+              <p>{currentSlide.description}</p>
+              <Link to={currentSlide.buttonLink} className="start-project-btn">
+                {currentSlide.buttonText}
               </Link>
-            </div>
-          </div>
-      <div className="navigation-buttons">
-        <a className="nav-button" onClick={prevSlide} data-aos="fade-right">
-          <FaArrowLeft />
-        </a>
-        <a className="nav-button" onClick={nextSlide} data-aos="fade-left">
-          <FaArrowRight />
-        </a>
+            </>
+          )}
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Left Navigation Arrow */}
+      <button onClick={prevSlide} className="nav-arrow left-arrow">
+        <FaArrowLeft />
+      </button>
+
+      {/* Right Navigation Arrow */}
+      <button onClick={nextSlide} className="nav-arrow right-arrow">
+        <FaArrowRight />
+      </button>
+
+      {/* Progress Indicators (dots) at the bottom center */}
+      <div className="progress-indicators-container">
+        <div className="progress-indicators">
+          {slides.map((_, i) => (
+            <span
+              key={i}
+              className={`dot ${i === index ? "active" : ""}`}
+              onClick={() => {
+                setDirection(i > index ? 1 : -1); // Determine animation direction
+                setIndex(i); // Change to clicked slide
+              }}
+            ></span>
+          ))}
+        </div>
       </div>
-    </div>
+
+      {/* Service Boxes Section (also animated and slides with content) */}
+      <AnimatePresence initial={false} custom={direction} mode="wait">
+        <motion.div
+          key={index + "service-boxes"} // Unique key to trigger animation for service boxes
+          variants={boxContainerVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          custom={direction}
+          className="service-boxes-container"
+        >
+          {/* Map through the service boxes for the current slide */}
+          {currentSlide.serviceBoxes.map((box, i) => (
+            <motion.div key={i} className="service-box" variants={itemVariants}>
+              <div className="box-number">{box.number}</div>
+              <h3>{box.title}</h3>
+              {/* Only render description if it exists */}
+              {box.description && <p>{box.description}</p>}
+            </motion.div>
+          ))}
+        </motion.div>
+      </AnimatePresence>
+    </section>
   );
 };
 

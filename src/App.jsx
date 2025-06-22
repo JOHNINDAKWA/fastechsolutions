@@ -8,14 +8,16 @@ import Telecom from './pages/Services/Telecom/Telecom';
 import CyberSecurity from './pages/Services/CyberSecurity/CyberSecurity';
 import Enterprise from './pages/Services/Enterprise/Enterprise';
 import { useEffect } from 'react';
-
-import 'aos/dist/aos.css';
-import AOS from 'aos';
 import PaymentReminder from './components/PaymentReminder/PaymentReminder.jsx';
 
 
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import WebDevelopment from './pages/Services/WebDevelopment/WebDevelopment.jsx';
+
+
 const App = () => {
-  const isPaymentComplete = false; 
+  const isPaymentComplete = true; 
 
   useEffect(() => {
     AOS.init({
@@ -37,6 +39,7 @@ const App = () => {
             <Route path='/telecom' element={<Telecom/>}/>
             <Route path='/cyber-security' element={<CyberSecurity/>}/>
             <Route path='/enterprise' element={<Enterprise/>}/>
+            <Route path='/web-development' element={<WebDevelopment/>}/>
           </Routes>
           <Footer/>
         </>

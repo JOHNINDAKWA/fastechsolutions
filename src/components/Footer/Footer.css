@@ -1,246 +1,326 @@
+/* Overall Footer Container */
 .footer {
-    margin-top: 6rem;
-    padding-top: 9rem;
-    background:
-        url(../../assets/images/bg-circle.png),
-        url(../../assets/images/bg-triangle.png),
-        url(../../assets/images/bg-top.png),
-        linear-gradient(to bottom right, var(--bs-dark), rgb(0, 0, 56));
-    background-position:
-        left 0px bottom 0px,
-        right 0px top 50%,
-        center top;
-    background-repeat: no-repeat;
-    color: #F0F6FF;
-    width: 100vw; 
-    max-width: 1364px;
-    margin: auto;
-    overflow-x: hidden;
+    background-color: var(--bs-dark); /* Dark background from your variables */
+    color: #F0F6FF; /* Light text color */
+    font-family: "Raleway", sans-serif;
+    padding-top: 0; /* No top padding here as CTA is margin-top */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Important to contain any floating elements */
+    position: relative; /* For absolute positioning of fixed buttons */
 }
 
-.footer-container {
-    padding: 2rem 2rem;
-}
-
-.footer-row {
+/* --- Top Call-to-Action Section (Kept as is) --- */
+.footer-cta-section {
+    background: linear-gradient(90deg, #5c20c0, #2b3990); /* Blue/purple gradient from image */
+    padding: 30px 50px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px; /* Slight rounded corners */
+    margin: 6rem auto 0 auto; /* Margin from top of screen, center horizontally */
+    max-width: 1200px; /* Limit width */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.cta-features {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-features span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn.primary-btn {
+    background-color: #fff; /* White background */
+    color: #2b3990; /* Dark blue text */
+    border: 1px solid #fff;
+}
+
+.cta-btn.primary-btn:hover {
+    background-color: #f0f0f0;
+    color: #1a2550;
+}
+
+.cta-btn.secondary-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Transparent white border */
+}
+
+.cta-btn.secondary-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background on hover */
+    border-color: #fff;
+}
+
+/* --- Main Footer Content --- */
+.footer-container {
+    padding: 60px 50px; /* Adjust padding for the main footer section */
+    max-width: 1400px; /* Match your overall content width */
+    margin: 0 auto;
+}
+
+/* Footer Links Grid - Adapted for original columns */
+.footer-links-row {
+    display: grid;
+    /* This grid template accommodates your 4 distinct content columns */
+    grid-template-columns: minmax(280px, 1.2fr) repeat(2, minmax(180px, 1fr)) minmax(250px, 1.2fr);
+    gap: 30px; /* Space between columns */
+    margin-top: 40px; /* Space from CTA section */
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 250px; 
-}
-
-.footer-column2 img{
-    width: 150px;
-}
-
-.footer-column2 {
-    flex: 1;
-    min-width: 220px;
-    padding: 12px; 
-    background: #0d0122;
-    margin-top: -8rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 12px;
-    position: relative; 
+    padding: 10px; /* Slight padding for inner content */
 }
 
-.footer-column2::before,
-.footer-column2::after {
-    content: '';
-    position: absolute; 
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), var(--primary-color), rgba(255, 255, 255, 0.5));
+.footer-col-address { /* Specific styling for the address column */
+    /* No specific background or border here, relying on main footer background */
 }
 
-.footer-column2::before {
-    height: 5px; 
-    width: 100%; 
-    top: 0; 
-    left: 0; 
-}
-
-.footer-column2::after {
-    height: 3px; 
-    width: 100%; 
-    bottom: 0; 
-    left: 0; 
-}
-
-
-.footer-column2 img{
-    width: 200px;
-}
-
-
-.footer-column2 p{
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-.footer-column2 a{
-    background: var(--primary-color);
-    color: #F0F6FF;
-    padding: 8px 14px;
-    width: 220px;
+.footer-col-address p {
+    margin-bottom: 15px; /* Space between address lines */
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.footer-column2 a:hover{
-    background: transparent;
-    border: 1px solid var(--primary-color);
-}
-
-
-
-.footer-title {
-    color: white;
-    margin-bottom: 1rem;
+    align-items: flex-start; /* Align text to top if icon is taller */
 }
 
 .footer-icon {
-    margin-right: 0.5rem;
+    margin-right: 10px;
+    font-size: 18px;
+    color: var(--primary-color); /* Use primary color for icons */
+    flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
-.footer-social {
+.footer-social-links {
     display: flex;
-    gap: 1rem;
+    gap: 10px;
+    margin-top: 20px; /* Space from address text */
 }
 
-.footer a{
-    text-decoration: none;
-}
-
-.footer-col{
-    margin-top: 1rem;
-}
-
-.footer-col-top p{
-    margin-bottom: 18px;
-}
-
-.footer .btn.btn-social {
+.social-icon-btn {
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #F0F6FF;
-    border: 1px solid rgba(256, 256, 256, .1);
+    color: #F0F6FF; /* White icons */
+    border: 1px solid rgba(255, 255, 255, .2); /* Subtle white border */
     border-radius: 50%;
-    transition: .3s;
+    transition: all 0.3s ease;
+    font-size: 18px;
 }
 
-.footer .btn.btn-social:hover {
-    color: var(--primary-color);
+.social-icon-btn:hover {
+    background-color: rgba(246, 138, 10, 0.15); /* Light orange transparent background */
+    border-color: var(--primary-color); /* Orange border on hover */
+    color: var(--primary-color); /* Orange icon on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
 }
 
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 10px;
-    padding: 0;
-    color: #F0F6FF;
-    font-weight: normal;
-    transition: .3s;
+.footer-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.footer .btn.btn-link:hover {
-    letter-spacing: 1px;
-}
-
-.footer-newsletter {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.footer-input {
-    border: none;
-    border-radius: 50px;
-    padding: 0.5rem 1rem;
-    flex: 1;
-}
-
-.footer-button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.footer-copyright {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-    max-width: 1400px;
-    padding: 25px 0;
-    font-size: 14px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer-copyright a {
-    color: #F0F6FF;
-}
-
-.footer-menu {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-}
-
-.footer-menu a {
-    color: #F0F6FF;
+.footer-link-item {
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 10px; /* Space between link items */
+    transition: color 0.3s ease;
 }
 
-.footer-menu a:hover {
-    text-decoration: underline;
+.footer-link-item:hover {
+    color: #fff;
+}
+
+/* Fastech Logo & Description Column - Adapted */
+.footer-fastech-info {
+    padding: 20px; /* Adjust padding */
+    background: rgba(0, 0, 0, 0.2); /* Slightly transparent dark background */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    position: relative; /* For the border pseudo-elements */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Original border lines for the Fastech column */
+.footer-fastech-info::before,
+.footer-fastech-info::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent); /* Orange gradient for borders */
+}
+
+.footer-fastech-info::before {
+    height: 3px;
+    width: 80%; /* Shorter width for border */
+    top: 0;
+    left: 10%; /* Center the border */
+    border-radius: 3px;
+}
+
+.footer-fastech-info::after {
+    height: 3px;
+    width: 80%; /* Shorter width for border */
+    bottom: 0;
+    left: 10%; /* Center the border */
+    border-radius: 3px;
 }
 
 
-.footer-link2{
+.footer-fastech-logo {
+    width: 150px; /* Size of the logo */
+    margin-bottom: 15px;
+}
+
+.footer-fastech-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 300px; /* Constrain text width */
+}
+
+.fastech-try-us-btn {
+    background: var(--primary-color); /* Orange background */
+    color: #F0F6FF;
+    padding: 10px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid var(--primary-color);
+}
+
+.fastech-try-us-btn:hover {
+    background: transparent;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(246, 138, 10, 0.3);
+}
+
+/* --- Copyright Section --- */
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 50px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-copyright .copyright-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 15px;
+}
+
+.copyright-text a {
+    color: #fff; /* White for the company name */
+    transition: color 0.3s ease;
+}
+
+.copyright-text a:hover {
+    color: var(--primary-color); /* Orange on hover for the company name */
+}
+
+.footer-link2 { /* Specific style for Jindakwa link */
     color: var(--primary-color) !important;
     font-style: italic;
+    font-weight: 500;
+}
+
+.bottom-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.bottom-menu a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.bottom-menu a:hover {
+    color: #fff;
 }
 
 
-
+/* --- Fixed Utility Buttons (WhatsApp & Back to Top) --- */
 .whatsapp-button {
     position: fixed;
     z-index: 100;
     bottom: 80px;
     right: 20px;
-    background: #25D366; 
+    background: #25D366;
     color: #fff;
     border: none;
     border-radius: 50%;
     font-size: 24px;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background 0.3s, transform 0.3s;
-  }
-  
-  .whatsapp-button:hover {
-    transform: scale(1.1); 
-  }
-  
-  .back-to-top {
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.back-to-top {
     position: fixed;
     z-index: 100;
     bottom: 20px;
@@ -249,127 +329,137 @@
     color: #fff;
     border: none;
     border-radius: 50%;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background 0.6s, transform 0.5s;
-  }
-  
-  .back-to-top:hover {
+}
+
+.back-to-top:hover {
     transform: rotate(1080deg);
-  }
-  
-  .back-to-top:focus {
+}
+
+.back-to-top:focus {
     outline: none;
-  }
-  
+}
 
+/* --- Media Queries for Responsiveness --- */
 
+/* Tablet and Smaller Desktops */
+@media (max-width: 1200px) {
+    .footer-cta-section {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 25px 40px;
+    }
+    .cta-title {
+        font-size: 28px;
+    }
+    .cta-features {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .footer-container {
+        padding: 50px 40px;
+    }
+    .footer-links-row {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust columns for more balanced wrap */
+        gap: 25px;
+    }
+    /* Specific adjustment for fastech info column on smaller screens */
+    .footer-fastech-info {
+        grid-column: span 2; /* Make it span 2 columns if 2-column layout */
+    }
+}
 
+/* Large Mobile / Small Tablet */
 @media (max-width: 992px) {
-    .footer {
-        padding-top: 6rem;
-
-        background-position:
-            left 0px bottom 0px,
-            right 0px top 50%,
-            left top;
-
-    }
-
-  
-
-    .footer-row {
+    .footer-cta-section {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-column {
-        min-width: auto;
         text-align: center;
-        margin-top: 5rem;
+        gap: 20px;
+        padding: 20px 30px;
     }
-
-    .footer-column2 {
-        margin-top: 2rem;
-        padding: 1rem;
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
     }
-
-    .footer-column2 img {
-        width: 120px;
-    }
-
-    .footer-column2 p {
-        font-size: 0.9rem;
-    }
-
-    .footer-column2 a {
-        width: auto;
-        padding: 6px 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-title {
-        font-size: 1.5rem;
-    }
-    .popular-link, 
-    .social-link-s{
-        display: none;
-    }
-
-    .footer-column2 img {
-        width: 100px;
-    }
-
-    .footer-row {
-        gap: 1.5rem;
-    }
-
-    .footer-column2 p {
-        font-size: 0.85rem;
-    }
-
-    .footer-social {
+    .cta-btn {
+        width: 100%;
         justify-content: center;
-        gap: 0.5rem;
+    }
+    .footer-container {
+        padding: 40px 30px;
+    }
+    .footer-links-row {
+        grid-template-columns: 1fr; /* Single column layout for most content */
+        gap: 30px;
+    }
+    .footer-column {
+        text-align: center; /* Center text in columns */
+    }
+    .footer-col-address p {
+        justify-content: center; /* Center address icons/text */
+    }
+    .footer-social-links {
+        justify-content: center; /* Center social icons */
+    }
+    /* Fastech column specific adjustments */
+    .footer-fastech-info {
+        grid-column: auto; /* Reset grid-column */
+        margin-top: 20px; /* Ensure space if it was pulled up */
+    }
+    .footer-fastech-logo {
+        margin-bottom: 10px;
+    }
+    .footer-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .footer-link-item {
+        font-size: 14px;
+    }
+    .footer-copyright {
+        padding: 20px 30px;
+    }
+    .copyright-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .copyright-text, .bottom-menu {
+        text-align: center;
     }
 }
 
+/* Small Mobile */
 @media (max-width: 576px) {
-    .footer {
-        padding-top: 4rem;
+    .footer-cta-section {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 15px 20px;
     }
-
-    .footer-title {
-        font-size: 1.2rem;
+    .cta-title {
+        font-size: 24px;
     }
-
-    .footer-row{
-        gap: 0;
-    }
-
-    .footer-copyright {
+    .cta-features {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding-bottom: 0;
+        gap: 10px;
+        font-size: 14px;
     }
-
-    .footer-menu {
-        display: none;
+    .footer-container {
+        padding: 30px 20px;
     }
-
-    .footer-menu a {
-        font-size: 0.9rem;
+    .whatsapp-button, .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
     }
-
-    .footer-link2 {
-        font-size: 0.9rem;
+    .footer-fastech-info p {
+        padding: 0 10px; /* Reduce padding for small screens */
     }
 }
