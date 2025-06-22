@@ -60,7 +60,7 @@ const Footer = () => {
             </p>
             <p>
               <FaEnvelope className="footer-icon" />
-              fastech248@gmail.com
+              sales@fastechinternet.co.ke
             </p>
             <div className="footer-social-links"> {/* New container for social icons */}
               <a className="social-icon-btn" href="">

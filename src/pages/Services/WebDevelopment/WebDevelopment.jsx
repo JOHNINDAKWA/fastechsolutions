@@ -45,10 +45,10 @@ const WebDevelopment = () => {
 
 // Data for "What We Offer" section - REDUCED TO 8, ICONS UPDATED
 const servicesOffered = [
-  { icon: GiWaveSurfer, title: "Custom Website Design", description: "Unique and captivating designs tailored to your brand, ensuring a distinct online presence with a fluid user experience." },
-  { icon: FaMobileAlt, title: "Responsive Development", description: "Building websites that look and perform flawlessly across all devices – desktops, tablets, and mobile phones for maximum reach." },
-  { icon: FaShoppingCart, title: "E-commerce Platforms", description: "Developing robust and secure online stores (Shopify, WooCommerce, custom) to drive your sales and scale your business." },
-  { icon: FaWordpressSimple, title: "CMS Solutions", description: "Empowering you with easy-to-use platforms like WordPress, Strapi, or custom headless CMS for effortless content management." },
+  { icon: GiWaveSurfer, title: "Custom Website Design", description: "Your brand deserves more than a copy-paste layout. We design sleek, intuitive, and striking sites that feel like your brand—elevated." },
+  { icon: FaMobileAlt, title: "Responsive Across Every Device", description: "From massive monitors to mobile screens, your site will look pixel-perfect—and load at lightning speed." },
+  { icon: FaShoppingCart, title: "E-commerce Platforms", description: "Robust, secure, and optimized for sales. Shopify, WooCommerce, or custom builds—we make buying feel effortless." },
+  { icon: FaWordpressSimple, title: "CMS Solutions", description: "Take control with flexible content management powered by WordPress, Strapi, or custom headless CMS. No code? No problem." },
   { icon: FaLaptopCode, title: "Web Applications", description: "Crafting powerful web apps like custom portals, interactive dashboards, and SaaS solutions tailored to your unique business processes." },
   { icon: FaCloudUploadAlt, title: "API Integrations", description: "Seamlessly connecting your website with third-party services, payment gateways, and CRM systems for enhanced functionality." },
   { icon: MdOutlineSecurity, title: "Security Hardening", description: "Implementing advanced security measures including HTTPS, firewalls, and regular backups to protect your website from cyber threats." },
@@ -227,8 +227,8 @@ const portfolioProjects = [
 {/* 1. Hero Part - NEW DESIGN */}
       <div className="web-hero-new">
         <div className="web-hero-content-new" data-aos="fade-right">
-          <h1 data-aos="fade-up">Custom Web Development that Powers Business Growth</h1>
-          <p data-aos="fade-up" data-aos-delay="100">We build fast, secure, and scalable websites tailored to your needs.</p>
+          <h1 data-aos="fade-up">Build smarter. Load faster. Convert better.</h1>
+          <p data-aos="fade-up" data-aos-delay="100">We don’t just build websites, we craft high-performing digital experiences that turn clicks into clients. No templates. No fluff. Just results.</p>
           <div className="web-hero-ctas-new" data-aos="fade-up">
             <Link to="/contact" className="hero-btn-new primary-btn-new">
               Get a Quote Today <FaArrowRight />

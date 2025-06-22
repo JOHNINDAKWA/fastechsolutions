@@ -6,9 +6,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
-    padding-top: 6rem; 
-    padding-bottom: 6rem; 
-    margin-bottom: 5rem;
+    padding-top: 2rem; 
+    padding-bottom: 2rem; 
+    margin-bottom: 2rem;
 }
 
 .contact-cont{
@@ -61,14 +61,12 @@
     transform: rotate(15deg);
 }
 
-
-
 /* Contact Section Styles */
 .contact-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
+    padding: 20px 20px;
     margin: 20px 0;
     margin-bottom: 10rem;
 }
@@ -80,7 +78,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .contact-body-left {

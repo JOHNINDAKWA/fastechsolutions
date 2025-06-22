@@ -18,34 +18,35 @@ const defaultServiceBoxes = [
   { 
     number: "01", 
     title: "Strategic IT Consultation", 
-    description: "Through collaborative discovery, we assess your unique needs and future goals to design a strategic roadmap for robust, integrated solutions across all your IT infrastructure." 
+    description: "We analyze your goals and craft tailored IT roadmaps for long-term success." 
   },
   { 
     number: "02", 
     title: "Secure System Design", 
-    description: "Crafting intuitive user experiences, resilient network architectures, and robust security blueprints ensures scalable, user-friendly, and protected digital environments." 
+    description: "We design user-friendly systems with strong architecture and security in mind." 
   },
   { 
     number: "03", 
-    title: "Expert Implementation & Deployment", 
-    description: "Our skilled teams deliver and integrate cutting-edge technologies, from seamless network setups and security deployments to bespoke web development and communication systems." 
+    title: "Implementation & Deployment", 
+    description: "We deliver and integrate reliable tech solutions, from networks to websites." 
   },
   { 
     number: "04", 
-    title: "Proactive Monitoring & Support", 
-    description: "Ensuring continuous operation and optimized performance, we provide ongoing managed IT services, real-time security monitoring, and reliable telecommunication maintenance." 
+    title: "Monitoring & Support", 
+    description: "We offer 24/7 system monitoring, support, and maintenance for smooth operations." 
   },
   { 
     number: "05", 
-    title: "Advanced Cyber Protection", 
-    description: "Embedding comprehensive cybersecurity measures, we safeguard your valuable assets against evolving threats, ensuring data integrity, privacy, and business continuity across all platforms." 
+    title: "Cybersecurity Protection", 
+    description: "We protect your data and systems with layered security and threat prevention." 
   },
   { 
     number: "06", 
-    title: "Future-Proofing & Innovation", 
-    description: "We constantly research and integrate emerging technologies, providing adaptable solutions that keep your business agile, competitive, and secure in a rapidly changing digital landscape." 
+    title: "Innovation & Future-Proofing", 
+    description: "We adopt new tech to keep your business agile and ready for what’s next." 
   },
 ];
+
 
 // Data for all the slides
 const slides = [

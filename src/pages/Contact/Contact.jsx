@@ -9,8 +9,29 @@ import {
   FaGlobeEurope,
   FaPhone,
 } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const formRef = useRef();
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm('service_o6okybg', 'template_51v7tzc', formRef.current, 'urJ5kaDu1-lHhAuEH')
+    .then(() => {
+      toast.success('✅ Message sent successfully!');
+      formRef.current.reset();
+    })
+    .catch((error) => {
+      console.error('EmailJS Error:', error);
+      toast.error('❌ Failed to send message. Please try again.');
+    });
+};
+
   return (
     <div className="contact-cont">
       <div className="contact-banner">
@@ -93,18 +114,35 @@ const Contact = () => {
           </div>
 
           <div className="contact-body-right" data-aos="fade-left">
-            <form action="">
+            <form ref={formRef} onSubmit={sendEmail}>
               <div className="input-divider">
-                <input type="text" placeholder="Your Name" />
-                <input type="email" placeholder="Your Email" />
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="Your Email"
+                  required
+                />
               </div>
               <div className="input-divider">
-                <input type="tel" placeholder="Your Phone" />
-                <input type="text" placeholder="Your Interested Service" />
+                <input type="tel" name="user_phone" placeholder="Your Phone" />
+                <input
+                  type="text"
+                  name="user_service"
+                  placeholder="Interested Service"
+                />
               </div>
               <div className="contact-rest">
-                <input type="text" placeholder="Your Phone" />
-                <textarea placeholder="Body"></textarea>
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
                 <button type="submit">Send Message</button>
               </div>
             </form>
@@ -122,6 +160,16 @@ const Contact = () => {
           </figure>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
     </div>
   );
 };

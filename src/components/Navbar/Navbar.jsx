@@ -8,11 +8,10 @@ import {
   FaGlobeEurope,
   FaPhone,
   FaBars,
-  FaBuilding, // Enterprise
-  FaWifi, // Telecom
-  FaShieldAlt, // Cyber Security
-  FaCode, // Web Development
-  // No need for the extra icons if only 4 links
+  FaBuilding, 
+  FaWifi,
+  FaShieldAlt,
+  FaCode, 
   FaCaretDown,
 } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
@@ -46,8 +45,8 @@ const Navbar = () => {
               </div>
               <div className="separator"></div>
               <div className="email">
-                <a href="mailto:example@gmail.com" className="email-link">
-                  <FaEnvelope className="icon-envelope" /> fastech248@gmail.com
+                <a href="sales@fastechinternet.co.ke" className="email-link">
+                  <FaEnvelope className="icon-envelope" /> sales@fastechinternet.co.ke
                 </a>
               </div>
             </div>
